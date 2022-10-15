@@ -33,17 +33,6 @@ export default function App() {
 
   const history = useHistory();
 
-  // useEffect(() => {
-  //   tokenCheck();
-  //   loggedIn &&
-  //     Promise.all([api.getUserInfo(), api.getCards()])
-  //       .then(([apiUser, apiCards]) => {
-  //         setCurrentUser(apiUser);
-  //         setCards(apiCards);
-  //       })
-  //       .catch((err) => console.log(err));
-  // }, [loggedIn]);
-
   useEffect(()=>{
     tokenCheck();
     const token = localStorage.getItem('token');
@@ -53,9 +42,7 @@ export default function App() {
         setCurrentUser(apiUser)
         setCards(apiCards)
       })
-      .catch((err) => {
-        console.log(err);
-      })
+      .catch((err) => console.log(err));
     }}, [loggedIn])
 
   // управление модалками
@@ -175,6 +162,7 @@ export default function App() {
       })
       .then((data) => {
         if (data.token) {
+          console.log(data.token);
           setLoggedIn(true);
           tokenCheck();
           history.push("/");
