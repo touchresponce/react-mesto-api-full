@@ -85,7 +85,7 @@ class Api {
 }
 
 const api = new Api({
-  baseUrl: 'http://api.mesto.touchresponce.nomoredomains.icu',
+  baseUrl: 'https://api.mesto.touchresponce.nomoredomains.icu',
   headers: {
     'Content-Type': 'application/json',
   },
