@@ -1,4 +1,4 @@
-export const baseUrl = "http://api.mesto.touchresponce.nomoredomains.icu";
+export const baseUrl = "https://api.mesto.touchresponce.nomoredomains.icu";
 
 export const register = (email, password) => {
   return fetch(`${baseUrl}/signup`, {
