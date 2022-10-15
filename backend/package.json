@@ -1,0 +1,30 @@
+{
+  "name": "mesto-express",
+  "description": "backend ",
+  "author": "touchresponce",
+  "homepage": "https://github.com/touchresponce/express-mesto-gha/blob/main/README.md",
+  "version": "0.1.0",
+  "main": "./app.js",
+  "devDependencies": {
+    "eslint": "^8.23.1",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.26.0",
+    "nodemon": "^2.0.20"
+  },
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js",
+    "lint": "npx eslint ."
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.20.0",
+    "celebrate": "^15.0.1",
+    "express": "^4.18.1",
+    "express-winston": "^4.2.0",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.6.1",
+    "validator": "^13.7.0",
+    "winston": "^3.8.2"
+  }
+}

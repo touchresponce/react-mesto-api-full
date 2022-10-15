@@ -1,0 +1,28 @@
+.header__burger-line {
+  background-color: white;
+  height: 3px;
+  position: relative;
+  width: 24px;
+}
+
+.header__burger-line::before {
+  background-color: white;
+  content: "";
+  height: 3px;
+  left: 0;
+  position: absolute;
+  transition: all 0.3s ease-out;
+  width: 24px;
+  top: -8px;
+}
+
+.header__burger-line::after {
+  background-color: white;
+  content: "";
+  height: 3px;
+  left: 0;
+  position: absolute;
+  transition: all 0.3s ease-out;
+  width: 24px;
+  top: 8px;
+}

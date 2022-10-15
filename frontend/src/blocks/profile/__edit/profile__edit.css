@@ -1,0 +1,21 @@
+.profile__edit {
+  border: none;
+  width: 120px;
+  height: 120px;
+  border-radius: 100%;
+  background-image: url('../../../images/pencil.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  background-color: rgba(0, 0, 0, 0.8);
+  background-size: 26px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: 0.2s ease-in-out;
+  opacity: 0;
+}
+
+.profile__edit:hover {
+  opacity: 1;
+}

@@ -1,0 +1,6 @@
+.profile__wrapper {
+  /* position: relative; */
+  background-image: url('../../../images/pencil.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+}

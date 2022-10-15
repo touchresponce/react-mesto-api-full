@@ -1,0 +1,15 @@
+.header__burger-open .header__burger-line {
+  background-color: transparent;
+}
+
+.header__burger-open .header__burger-line:before {
+  width: 28px;
+  transform: rotate(45deg);
+  top: 0;
+}
+
+.header__burger-open .header__burger-line::after {
+  width: 28px;
+  transform: rotate(-45deg);
+  top: 0;
+}

@@ -1,0 +1,13 @@
+.login {
+  margin: 0 auto;
+  width: 358px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+@media screen and (max-width: 380px) {
+  .login {
+    width: calc(100% - 10px * 2);
+  }
+}

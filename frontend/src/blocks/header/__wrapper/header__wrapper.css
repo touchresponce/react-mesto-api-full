@@ -1,0 +1,23 @@
+.header__wrapper {
+  display: flex;
+  margin-top: 12px;
+  transition: all 0.3s linear;
+}
+
+@media screen and (max-width: 500px) {
+  .header__wrapper {
+    align-items: center;
+    background-color: black;
+    border-bottom: 1px solid rgba(84, 84, 84, 0.7);
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    padding: 48px 0;
+    margin: 0;
+    position: absolute;
+    right: 0;
+    top: -160px;
+    width: 100%;
+  }
+}
