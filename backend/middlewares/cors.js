@@ -1,7 +1,7 @@
 const allowedCors = [
   'http://localhost:3000',
-  'http://ia-stepanov.nomoredomains.xyz',
-  'https://ia-stepanov.nomoredomains.xyz',
+  'http://mesto.touchresponce.nomoredomains.icu/',
+  'https://mesto.touchresponce.nomoredomains.icu/',
 ];
 
 const cors = (req, res, next) => {
