@@ -33,16 +33,30 @@ export default function App() {
 
   const history = useHistory();
 
-  useEffect(() => {
+  // useEffect(() => {
+  //   tokenCheck();
+  //   loggedIn &&
+  //     Promise.all([api.getUserInfo(), api.getCards()])
+  //       .then(([apiUser, apiCards]) => {
+  //         setCurrentUser(apiUser);
+  //         setCards(apiCards);
+  //       })
+  //       .catch((err) => console.log(err));
+  // }, [loggedIn]);
+
+  useEffect(()=>{
     tokenCheck();
-    loggedIn &&
+    const token = localStorage.getItem('token');
+    if (token) {
       Promise.all([api.getUserInfo(), api.getCards()])
-        .then(([apiUser, apiCards]) => {
-          setCurrentUser(apiUser);
-          setCards(apiCards);
-        })
-        .catch((err) => console.log(err));
-  }, [loggedIn]);
+      .then(([apiUser, apiCards]) => {
+        setCurrentUser(apiUser)
+        setCards(apiCards)
+      })
+      .catch((err) => {
+        console.log(err);
+      })
+    }}, [loggedIn])
 
   // управление модалками
   function handleEditProfileClick() {
