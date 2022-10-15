@@ -1,5 +1,6 @@
 const allowedCors = [
   'http://localhost:3000',
+  'https://localhost:3000',
   'http://mesto.touchresponce.nomoredomains.icu',
   'https://mesto.touchresponce.nomoredomains.icu',
 ];
