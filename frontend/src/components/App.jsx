@@ -37,8 +37,8 @@ export default function App() {
     tokenCheck();
     const token = localStorage.getItem('token');
     if (token) {
-      // Promise.all([api.getUserInfo(), api.getCards()])
-      // .then(([apiUser, apiCards]) => {
+      Promise.all([api.getUserInfo(), api.getCards()])
+      .then(([apiUser, apiCards]) => {
         // console.log(apiUser, apiCards);
         // setCurrentUser(apiUser)
         // setCards(apiCards)
