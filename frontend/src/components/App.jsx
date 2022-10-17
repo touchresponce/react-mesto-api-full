@@ -35,7 +35,7 @@ export default function App() {
 
   useEffect(()=>{
     tokenCheck();
-    const token = localStorage.getItem('token');
+    const token = localStorage.getItem('jwt');
     if (token) {
       Promise.all([api.getUserInfo(), api.getCards()])
       .then(([apiUser, apiCards]) => {
