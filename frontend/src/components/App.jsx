@@ -40,7 +40,7 @@ export default function App() {
       Promise.all([api.getUserInfo(), api.getCards()])
       .then(([apiUser, apiCards]) => {
         setCurrentUser(apiUser.user)
-        console.log(apiUser.user);
+        setEmail(apiUser.user.email);
         setCards(apiCards.data)
       })
       .catch((err) => console.log(err));
