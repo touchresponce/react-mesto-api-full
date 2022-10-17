@@ -4,10 +4,19 @@ class Api {
     this._headers = config.headers;
   }
 
+  _getHeaders() {
+    const jwt = localStorage.getItem('jwt');
+    return {
+      'Authorization': `Bearer ${jwt}`,
+      ...this._headers,
+    };
+  }
+
   // возвращающий юзера из апи
   getUserInfo() {
     return fetch(`${this._baseUrl}/users/me`, {
-      headers: this._headers,
+      // headers: this._headers,
+      headers: this._getHeaders
     }).then(this._getResponce);
   }
 
