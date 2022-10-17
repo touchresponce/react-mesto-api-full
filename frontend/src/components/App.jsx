@@ -37,11 +37,12 @@ export default function App() {
     tokenCheck();
     const token = localStorage.getItem('token');
     if (token) {
-      Promise.all([api.getUserInfo(), api.getCards()])
-      .then(([apiUser, apiCards]) => {
-        console.log(apiUser, apiCards);
-        setCurrentUser(apiUser)
-        setCards(apiCards)
+      // Promise.all([api.getUserInfo(), api.getCards()])
+      // .then(([apiUser, apiCards]) => {
+        // console.log(apiUser, apiCards);
+        // setCurrentUser(apiUser)
+        // setCards(apiCards)
+        console.log('здесь установка ползователя');
       })
       .catch((err) => console.log(err));
     }}, [loggedIn])
