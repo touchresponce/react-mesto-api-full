@@ -41,7 +41,7 @@ export default function App() {
       .then(([apiUser, apiCards]) => {
         // console.log(apiUser, apiCards);
         debugger
-        setCurrentUser(apiUser)
+        setCurrentUser(apiUser.user)
         setCards(apiCards)
         // console.log('здесь установка ползователя');
       })
