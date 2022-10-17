@@ -204,8 +204,8 @@ export default function App() {
         .getToken(jwt)
         .then((res) => {
           setLoggedIn(true);
-          // setEmail(res.email);
-          console.log(res)
+          setEmail(res.user.email);
+          // console.log(res)
           history.push("/");
         })
         .catch((err) => {
