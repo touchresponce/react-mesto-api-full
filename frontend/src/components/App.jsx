@@ -39,11 +39,9 @@ export default function App() {
     if (token) {
       Promise.all([api.getUserInfo(), api.getCards()])
       .then(([apiUser, apiCards]) => {
-        // console.log(apiUser, apiCards);
-        debugger
+        console.log(apiUser, apiCards);
         setCurrentUser(apiUser.user)
         setCards(apiCards)
-        // console.log('здесь установка ползователя');
       })
       .catch((err) => console.log(err));
     }}, [loggedIn])
