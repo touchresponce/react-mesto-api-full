@@ -15,7 +15,6 @@ class Api {
   // возвращающий юзера из апи
   getUserInfo() {
     return fetch(`${this._baseUrl}/users/me`, {
-      // headers: this._headers,
       headers: this._getHeaders()
     }).then(this._getResponce);
   }
@@ -24,7 +23,7 @@ class Api {
   setUserInfo(data) {
     return fetch(`${this._baseUrl}/users/me`, {
       method: 'PATCH',
-      headers: this._headers,
+      headers: this._getHeaders(),
       body: JSON.stringify({
         name: data.name,
         about: data.about,
@@ -35,7 +34,7 @@ class Api {
   // получение карточки
   getCards() {
     return fetch(`${this._baseUrl}/cards`, {
-      headers: this._headers,
+      headers: this._getHeaders()
     }).then(this._getResponce);
   }
 
