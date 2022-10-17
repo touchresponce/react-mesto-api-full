@@ -40,9 +40,10 @@ export default function App() {
       Promise.all([api.getUserInfo(), api.getCards()])
       .then(([apiUser, apiCards]) => {
         // console.log(apiUser, apiCards);
-        // setCurrentUser(apiUser)
-        // setCards(apiCards)
-        console.log('здесь установка ползователя');
+        debugger
+        setCurrentUser(apiUser)
+        setCards(apiCards)
+        // console.log('здесь установка ползователя');
       })
       .catch((err) => console.log(err));
     }}, [loggedIn])
@@ -164,7 +165,7 @@ export default function App() {
       })
       .then((data) => {
         if (data.token) {
-          console.log(data.token);
+          // console.log(data.token);
           setLoggedIn(true);
           tokenCheck();
           history.push("/");
