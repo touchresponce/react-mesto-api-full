@@ -39,10 +39,8 @@ export default function App() {
     if (token) {
       Promise.all([api.getUserInfo(), api.getCards()])
       .then(([apiUser, apiCards]) => {
-        console.log(apiUser, apiCards);
         setCurrentUser(apiUser.user)
         setCards(apiCards.data)
-        console.log(apiUser.user, apiCards)
       })
       .catch((err) => console.log(err));
     }}, [loggedIn])
@@ -206,8 +204,8 @@ export default function App() {
         .getToken(jwt)
         .then((res) => {
           setLoggedIn(true);
-          // setEmail(res.email);
-          // console.log(res)
+          setEmail(res.email);
+          console.log(res)
           history.push("/");
         })
         .catch((err) => {
