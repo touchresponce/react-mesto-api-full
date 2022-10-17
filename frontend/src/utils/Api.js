@@ -42,7 +42,7 @@ class Api {
   setCard(data) {
     return fetch(`${this._baseUrl}/cards`, {
       method: 'POST',
-      headers: this._headers,
+      headers: this._getHeaders(),
       body: JSON.stringify({
         name: data.name,
         link: data.link,
@@ -54,7 +54,7 @@ class Api {
   deleteCard(_id) {
     return fetch(`${this._baseUrl}/cards/${_id}`, {
       method: 'DELETE',
-      headers: this._headers,
+      headers: this._getHeaders()
     }).then(this._getResponce);
   }
 
@@ -62,7 +62,7 @@ class Api {
   like(cardId) {
     return fetch(`${this._baseUrl}/cards/likes/${cardId}`, {
       method: 'PUT',
-      headers: this._headers,
+      headers: this._getHeaders()
     }).then(this._getResponce);
   }
 
@@ -70,7 +70,7 @@ class Api {
   dislike(cardId) {
     return fetch(`${this._baseUrl}/cards/likes/${cardId}`, {
       method: 'DELETE',
-      headers: this._headers,
+      headers: this._getHeaders()
     }).then(this._getResponce);
   }
 
@@ -78,7 +78,7 @@ class Api {
   setAvatar(link) {
     return fetch(`${this._baseUrl}/users/me/avatar`, {
       method: 'PATCH',
-      headers: this._headers,
+      headers: this._getHeaders(),
       body: JSON.stringify(link),
     }).then(this._getResponce);
   }
