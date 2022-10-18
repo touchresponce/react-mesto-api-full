@@ -12,7 +12,9 @@ export default function Card({ card, onCardClick, onCardLike, onConfirmOpen, onC
   }`;
 
   // проверка лайков
-  const isLiked = card.likes.some((i) => i._id === currentUser._id);
+  console.log(card)
+  // const isLiked = card.likes.some((i) => i._id === currentUser._id);
+  const isLiked = card.likes.some((i) => i.owner === currentUser._id);
   const cardLikeButtonClassName = `${
     isLiked ? 'element__like element__like-active' : 'element__like'
   }`;
