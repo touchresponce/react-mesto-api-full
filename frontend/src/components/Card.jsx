@@ -9,7 +9,8 @@ export default function Card({ card, onCardClick, onCardLike, onConfirmOpen, onC
 
   console.log(card)
 
-  const isOwn = card.owner._id === currentUser._id;
+  // const isOwn = card.owner._id === currentUser._id;
+  const isOwn = card.owner === currentUser._id;
   const cardDeleteButtonClassName = `card__delete-button ${
     isOwn ? 'element__delete' : 'element__delete_hidden'
   }`;
