@@ -17,12 +17,12 @@ mongoose.connect('mongodb://localhost:27017/mestodb');
 // app.use(cors);
 app.use(cors());
 
-app.get('/crash-test', () => {
-  console.log('crash');
-  setTimeout(() => {
-    throw new Error('Сервер сейчас упадёт');
-  }, 0);
-});
+// app.get('/crash-test', () => {
+//   console.log('crash');
+//   setTimeout(() => {
+//     throw new Error('Сервер сейчас упадёт');
+//   }, 0);
+// });
 
 app.use(requestLogger); // логгер запроса
 
