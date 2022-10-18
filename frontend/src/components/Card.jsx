@@ -6,6 +6,9 @@ export default function Card({ card, onCardClick, onCardLike, onConfirmOpen, onC
   const currentUser = useContext(CurrentUserContext);
 
   // "доступ" к удалению
+
+  console.log(card)
+
   const isOwn = card.owner._id === currentUser._id;
   const cardDeleteButtonClassName = `card__delete-button ${
     isOwn ? 'element__delete' : 'element__delete_hidden'
