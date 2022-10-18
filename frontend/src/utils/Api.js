@@ -60,7 +60,7 @@ class Api {
 
   // добавить лайк
   like(cardId) {
-    return fetch(`${this._baseUrl}/cards/likes/${cardId}`, {
+    return fetch(`${this._baseUrl}/${cardId}/likes`, {
       method: 'PUT',
       headers: this._getHeaders()
     }).then(this._getResponce);
@@ -68,7 +68,7 @@ class Api {
 
   // удалить лайк
   dislike(cardId) {
-    return fetch(`${this._baseUrl}/cards/likes/${cardId}`, {
+    return fetch(`${this._baseUrl}/${cardId}/likes`, {
       method: 'DELETE',
       headers: this._getHeaders()
     }).then(this._getResponce);
