@@ -16,6 +16,5 @@
 
 
 ## Ссылки:
-- IP: 51.250.102.253
 - Frontend: https://mesto.touchresponce.nomoredomains.icu
 - Backend: https://api.mesto.touchresponce.nomoredomains.icu
